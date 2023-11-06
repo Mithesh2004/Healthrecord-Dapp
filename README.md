@@ -9,8 +9,8 @@
 ## How to Run
 
 #### step-1:
-
-- Add admin address and private key in the .env file present in the along with the repo
+- Clone this repo and
+- Add admin address and private key in the .env file present along with the repo
 
 #### step-2
 
