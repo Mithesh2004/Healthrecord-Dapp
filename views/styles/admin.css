@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  font-family: Roboto, Arial, sans-serif;
+}
+.card {
+  background-color: rgb(9, 82, 71);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  /* Add hover effects */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.card p {
+  color: white;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+a {
+  text-decoration: none; /* This will remove the underline */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 0px;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.navbar a:hover {
+  background-color: #706d6d;
+}
+
+.navbar .admin-portal {
+  font-weight: bold;
+  color: #f2f2f2;
+  text-align: right;
+  padding-right: 20px;
+}

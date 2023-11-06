@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patient Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/user.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="http://localhost:3000/">Logout</a>
+      </div>
+      <div class="user-portal">User Portal</div>
+    </div>
+    <div class="content">
+      <h2>Patient Details</h2>
+      <p class="disp-addr" id="disp-addr"></p>
+      <div class="patient-details">
+        <div><span class="label">Name:</span> <span id="name"></span></div>
+        <div><span class="label">Age:</span> <span id="age"></span></div>
+        <div><span class="label">Weight:</span> <span id="weight"></span></div>
+        <div><span class="label">Sex:</span> <span id="sex"></span></div>
+        <div>
+          <span class="label">Blood Group:</span> <span id="bloodgroup"></span>
+        </div>
+        <div>
+          <span class="label">Condition:</span> <span id="condition"></span>
+        </div>
+        <div>
+          <span class="label">Medication:</span> <span id="medication"></span>
+        </div>
+      </div>
+
+      <h2>Patient Bill</h2>
+
+      <div class="bill-details">
+        <p id="waiting-tag" class="waiting-tag">Payment Proceeding.....</p>
+        <div id="time"></div>
+        <div id="amount"></div>
+
+        <button id="pay-button" type="button">Pay Bill</button>
+      </div>
+    </div>
+    <script src="/scripts/user.js" type="module"></script>
+  </body>
+</html>

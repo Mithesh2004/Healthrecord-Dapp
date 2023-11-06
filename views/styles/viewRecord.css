@@ -1,0 +1,181 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  padding: 0;
+  margin: 0;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+#disp-addr {
+  font-family: "Times New Roman", Times, serif;
+  color: gray;
+}
+form {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.patient-details,
+.bill-details {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.patient-details div {
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow-wrap: break-word;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+}
+button:disabled {
+  /* Styles for the disabled button */
+  background-color: #afafaf;
+  color: #666666;
+  cursor: default;
+}
+button:not(:disabled):hover {
+  opacity: 0.8;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 14px 0px;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.navbar a:hover {
+  background-color: #706d6d;
+}
+
+.navbar .admin-portal {
+  font-weight: bold;
+  color: #f2f2f2;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.content {
+  padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#trash-icon,
+#edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  color: red;
+  font-weight: 500;
+  transition: transform 0.25s ease;
+}
+#edit-icon {
+  transform: rotateZ(90deg);
+  font-size: 20px;
+  font-weight: 300;
+}
+#trash-icon:hover {
+  transform: scale(1.2);
+}
+#edit-icon:hover {
+  transform: rotateZ(90deg) scale(1.2);
+}
+
+.label {
+  font-weight: bold;
+  color: #484747;
+  display: block;
+  margin-bottom: 10px;
+}
+.active {
+  background-color: #706d6d;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.waiting-tag {
+  color: red;
+  display: none;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.waiting-tag {
+  color: red;
+  display: none;
+}

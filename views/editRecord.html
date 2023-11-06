@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Patient Record</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/editRecord.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="http://localhost:3000/admin">Home</a>
+        <a href="http://localhost:3000/add-record">Add Record</a>
+        <a href="http://localhost:3000/view-record">View Record</a>
+        <a class="active" href="http://localhost:3000/edit-record"
+          >Update Record</a
+        >
+        <a href="http://localhost:3000/set-bill">Bills</a>
+        <a href="http://localhost:3000/">Logout</a>
+      </div>
+      <div class="admin-portal">Admin Portal</div>
+    </div>
+    <div class="content">
+      <h2>Update Patient Record</h2>
+      <p id="disp-addr"></p>
+      <form class="address-form" id="address-form">
+        <label class="label" for="address">Patient Address</label>
+        <input type="text" id="address" name="address" required />
+        <button class="search-btn" type="submit">Search Patient</button>
+      </form>
+
+      <form class="update-form" id="update-form" style="display: none">
+        <label class="label" for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label class="label" for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+
+        <label class="label" for="weight">Weight</label>
+        <input type="text" id="weight" name="weight" required />
+
+        <label class="label" for="sex">Sex</label>
+        <input type="text" id="sex" name="sex" required />
+
+        <label class="label" for="bloodgroup">Blood Group</label>
+        <input type="text" id="bloodgroup" name="bloodgroup" required />
+
+        <label class="label" for="condition">Condition</label>
+        <textarea id="condition" name="condition" rows="4" cols="25"></textarea>
+
+        <label class="label" for="medication">Medication</label>
+        <textarea
+          id="medication"
+          name="medication"
+          rows="4"
+          cols="25"
+        ></textarea>
+
+        <button id="update-btn" type="submit">Update Record</button>
+      </form>
+    </div>
+    <script src="/scripts/editRecord.js" type="module"></script>
+  </body>
+</html>

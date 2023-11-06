@@ -1,0 +1,95 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+form {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+button:disabled {
+  /* Styles for the disabled button */
+  background-color: #afafaf;
+  color: #666666;
+  cursor: default;
+}
+button:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  padding: 14px 0px;
+}
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.navbar a:hover {
+  background-color: #706d6d;
+}
+
+.navbar .admin-portal {
+  font-weight: bold;
+  color: #f2f2f2;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.content {
+  padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.label {
+  font-weight: bold;
+  color: #484747;
+  display: block;
+  margin-bottom: 5px;
+}
+.active {
+  background-color: #706d6d;
+}

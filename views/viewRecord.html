@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Record</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/viewRecord.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="http://localhost:3000/admin">Home</a>
+        <a href="http://localhost:3000/add-record">Add Record</a>
+        <a class="active" href="http://localhost:3000/view-record"
+          >View Record</a
+        >
+        <a href="http://localhost:3000/edit-record">Update Record</a>
+        <a href="http://localhost:3000/set-bill">Bills</a>
+        <a href="http://localhost:3000/">Logout</a>
+      </div>
+      <div class="admin-portal">Admin Portal</div>
+    </div>
+    <div class="content">
+      <h2>View Patient Record</h2>
+      <form id="address-form">
+        <label class="label" for="address">Patient Address</label>
+        <input type="text" id="address" name="address" required />
+        <button type="submit">View Patient</button>
+      </form>
+      <div class="patient-details" style="display: none">
+        <p id="waiting-tag" class="waiting-tag">Deleting Record.....</p>
+        <h2>Patient Details</h2>
+        <div id="trash-icon">&#x1F5D1;</div>
+        <p id="disp-addr"></p>
+        <div><span class="label">Name:</span> <span id="name"></span></div>
+        <div><span class="label">Age:</span> <span id="age"></span></div>
+        <div><span class="label">Weight:</span> <span id="weight"></span></div>
+        <div><span class="label">Sex:</span> <span id="sex"></span></div>
+        <div>
+          <span class="label">Blood Group:</span> <span id="bloodgroup"></span>
+        </div>
+        <div>
+          <span class="label">Condition:</span> <span id="condition"></span>
+        </div>
+        <div>
+          <span class="label">Medication:</span> <span id="medication"></span>
+        </div>
+      </div>
+      <br />
+      <div id="bill-details" class="bill-details" style="display: none">
+        <h2>Pending Bills</h2>
+        <span id="edit-icon">&#9998;</span>
+        <div style="display: none; margin-bottom: 10px" id="bill-amount"></div>
+        <div style="display: none" id="bill-time"></div>
+        <p id="no-bill" style="display: none">No pending bills.</p>
+      </div>
+    </div>
+
+    <div id="edit-bill-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&#215;</span>
+        <form class="edit-bill-form" id="edit-bill-form">
+          <label class="label" for="amount">New Bill Amount (in Ether)</label>
+          <input type="text" id="amount" name="amount" required />
+
+          <label class="label" for="usdEquivalent">
+            Equivalent Amount (in USD)
+          </label>
+          <input type="text" id="usdEquivalent" disabled /><br />
+          <button id="editbill-btn" type="submit">Change Bill</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./scripts/viewRecord.js" type="module"></script>
+  </body>
+</html>

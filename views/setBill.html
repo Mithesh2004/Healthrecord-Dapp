@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Set Patient Bill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/setBill.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="http://localhost:3000/admin">Home</a>
+        <a href="http://localhost:3000/add-record">Add Record</a>
+        <a href="http://localhost:3000/view-record">View Record</a>
+        <a href="http://localhost:3000/edit-record">Update Record</a>
+        <a class="active" href="http://localhost:3000/set-bill">Bills</a>
+        <a href="http://localhost:3000/">Logout</a>
+      </div>
+      <div class="admin-portal">Admin Portal</div>
+    </div>
+    <div class="content">
+      <h2>Add Patient Bill</h2>
+
+      <form action="/submit_bill" method="post">
+        <label class="label" for="address">Patient Address</label>
+        <input type="text" id="address" name="address" required />
+        <label class="label" for="amount">Bill Amount (in Ether)</label>
+        <input type="text" id="amount" name="amount" required />
+
+        <label class="label" for="usdEquivalent"
+          >Equivalent Amount (in USD)</label
+        >
+        <input type="text" id="usdEquivalent" disabled />
+
+        <button id="set-bill" type="submit">Add Bill</button>
+      </form>
+    </div>
+    <script src="scripts/setBill.js" type="module"></script>
+  </body>
+</html>
